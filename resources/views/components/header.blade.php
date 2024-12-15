@@ -4,9 +4,9 @@
         {{ config('app.name', '酩酊酒店') }} 
        <!-- <img src="{{asset('img/logo.jpg')}}">-->
      </a>
-     <form class="row g-1">
+     <form action="{{ route('products.index') }}" method="GET" class="row g-1">
        <div class="col-auto">
-         <input class="form-control sakemart-header-search-input">
+       <input class="form-control samuraimart-header-search-input" name="keyword">
        </div>
        <div class="col-auto">
           <button type="submit" class="btn sakemart-header-search-button"><i class="fas fa-search sakemart-header-search-icon"></i></button>

@@ -19,4 +19,10 @@ class Product extends Model
     {
         return $this->hasMany(Review::class);
     }
+
+    //userとproductの中間テーブル
+    public function favorited_users()
+    {
+        return $this->belongMany(User::class)->withTimestmps();
+    }
 }
