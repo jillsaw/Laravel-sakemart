@@ -15,6 +15,12 @@
        <a href="{{ route('products.index') }}">トップ</a> > 商品一覧
        <h1>"{{ $keyword }}"の検索結果{{$total_count}}件</h1>
      @endif
+     <!--ソート追加(新着順、価格が安い順、価格が高い順)-->
+     <div>
+       Sort By
+       @sortablelink('id', 'ID')
+       @sortablelink('price', 'Price')
+    </div>
     </div>
     <div class="container mt-4">
       <div class="row w-100">
