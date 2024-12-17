@@ -163,3 +163,10 @@ label {
   letter-spacing: normal;
   color: #191919;
 }
+
+/*お気に入り*/
+.sakemart-favorite-add-cart {
+  border-radius: 2px;
+  color: #ffffff;
+  background-color: #0fbe9f;
+}
