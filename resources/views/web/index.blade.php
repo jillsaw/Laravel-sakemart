@@ -4,9 +4,9 @@
 
 <div class="row">
  <div class="col-2">
-   @component('components.sidebar', ['categories' => $categories, 'major_category_names' => $major_category_names])
+   @component('components.sidebar', ['categories' => $categories, 'major_categories' => $major_categories])
    @endcomponent
-  </div>
+ </div>
   <div class="col-9">
     <h1>おすすめ商品</h1>
       <div class="row">

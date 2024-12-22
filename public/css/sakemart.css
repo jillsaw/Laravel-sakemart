@@ -63,7 +63,7 @@ label {
   letter-spacing: normal;
   color: #191919;
 }
-
+/*マイページ*/
 .sakemart-login-input {
   border-radius: 2px;
   border: solid 1px #b2b2b2;
@@ -178,4 +178,10 @@ label {
 
 .review-score-color:focus {
   color: #0fbe9f;
+}
+
+.sakemart-delete-submit-button {
+  border-radius: 2px;
+  color: #ffffff;
+  background-color: #d94b0e;
 }
