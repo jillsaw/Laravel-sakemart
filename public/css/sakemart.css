@@ -95,20 +95,20 @@ a img:hover {
   opacity: 0.8;
 }
 
-.samuraimart-wrapper {
+.sakemart-wrapper {
   min-height: 100vh;
   position: relative;
   padding-bottom: 56px;
   box-sizing: border-box;
 }
 
-.samuraimart-login-input {
+.sakemart-login-input {
   border-radius: 2px;
   border: solid 1px #b2b2b2;
   background-color: #ffffff;
 }
 
-.samuraimart-check-label {
+.sakemart-check-label {
   font-size: 12px;
   font-weight: 500;
   font-stretch: normal;
@@ -118,13 +118,13 @@ a img:hover {
   color: #000000;
 }
 
-.samuraimart-require-input-label {
+.sakemart-require-input-label {
   border-radius: 2px;
   background-color: #e2001b;
   padding: 0 6px;
 }
 
-.samuraimart-require-input-label-text {
+.sakemart-require-input-label-text {
   font-size: 14px;
   font-stretch: normal;
   font-style: normal;
@@ -133,7 +133,7 @@ a img:hover {
   color: #ffffff;
 }
 
-.samuraimart-submit-button {
+.sakemart-submit-button {
   font-size: 14px;
   font-weight: bold;
   font-stretch: normal;
@@ -147,11 +147,11 @@ a img:hover {
   transition: 0.1s;
 }
 
-.samuraimart-submit-button:hover {
+.sakemart-submit-button:hover {
   opacity: 0.8;
 }
 
-.samuraimart-submit-button-disabled {
+.sakemart-submit-button-disabled {
   border-radius: 2px;
   font-weight: bold;
   pointer-events: none;
@@ -162,39 +162,39 @@ a img:hover {
   padding-bottom: 8px;
 }
 
-.samuraimart-header-container {
+.sakemart-header-container {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
 }
 
-.samuraimart-header-search-input {
+.sakemart-header-search-input {
   border-radius: 2px;
   border: solid 1px #e5e5e5;
 }
 
-.samuraimart-header-search-button {
+.sakemart-header-search-button {
   border-radius: 2px;
   background-color: #0fbe9f!important;
   transition: 0.1s;
 }
 
-.samuraimart-header-search-button:hover {
+.sakemart-header-search-button:hover {
   opacity: 0.8;
 }
 
-.samuraimart-header-search-icon {
+.sakemart-header-search-icon {
   color: #ffffff;
 }
 
-.samuraimart-header-fav-icon {
+.sakemart-header-fav-icon {
   color: #191919;
 }
 
-.samuraimart-header-shoppingcart-icon {
+.sakemart-header-shoppingcart-icon {
   color: #ffffff;
 }
 
-.samuraimart-favorite-button {
+.sakemart-favorite-button {
   border-radius: 2px;
   border: solid 1px #000000 !important;
   background-color: #ffffff;
@@ -204,7 +204,7 @@ a img:hover {
   transition: 0.1s;
 }
 
-.samuraimart-favorite-button:hover {
+.sakemart-favorite-button:hover {
   opacity: 0.8;
 }
 
@@ -212,7 +212,7 @@ a img:hover {
   color: #000000;
 }
 
-.samuraimart-sidebar-category-label {
+.sakemart-sidebar-category-label {
     width: 156px;
     height: 20px;
     font-size: 13px;
@@ -236,72 +236,72 @@ a img:hover {
   color: #cccccc;
 }
 
-.samuraimart-delete-submit-button {
+.sakemart-delete-submit-button {
   border-radius: 2px;
   padding-top: 8px;
   padding-bottom: 8px;
   transition: 0.1s;
 }
 
-.samuraimart-delete-submit-button:hover {
+.sakemart-delete-submit-button:hover {
   opacity: 0.8;
 }
 
-.samuraimart-product-img-detail {
+.sakemart-product-img-detail {
   width: 100%;
   height: 360px;
   object-fit: cover;
 }
 
-.samuraimart-product-img-recommend {
+.sakemart-product-img-recommend {
   width: 100%;
   height: 240px;
   object-fit: cover;
 }
 
-.samuraimart-product-img-products {
+.sakemart-product-img-products {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
 
-.samuraimart-product-img-cart {
+.sakemart-product-img-cart {
   width: 100%;
   height: 90px;
   object-fit: cover;
 }
 
-.samuraimart-product-img-cart-history {
+.sakemart-product-img-cart-history {
   width: 90%;
   height: 160px;
   object-fit: cover;
 }
 
 @media screen and (max-width: 767px) {
-  .samuraimart-product-img-detail {
+  .sakemart-product-img-detail {
     margin-bottom: 18px;
   }
 
-  .samuraimart-product-img-recommend {
+  .sakemart-product-img-recommend {
     height: 300px;
   }
 
-  .samuraimart-product-img-products {
+  .sakemart-product-img-products {
     height: 300px;
   }
 
-  .samuraimart-product-img-cart {
+  .sakemart-product-img-cart {
     height: 300px;
     margin-bottom: 6px;
   }
 
-  .samuraimart-product-img-cart-history {
+  .sakemart-product-img-cart-history {
     width: 100%;
     height: 300px;
     margin-bottom: 12px;
   }
 
-  .samuraimart-vertical-bar {
+  .sakemart-vertical-bar {
     display: none;
   }
 }
@@ -376,14 +376,14 @@ a img:hover {
   padding-right: 0;
 }
 
-.samuraimart-form-parts {
+.sakemart-form-parts {
   border-radius: 2px;
 }
 
-.samuraimart-mypage-link:hover {
+.sakemart-mypage-link:hover {
   transition: 0.3s;
 }
 
-.samuraimart-mypage-link:hover {
+.sakemart-mypage-link:hover {
   background-color: #f8f9fa;
 }

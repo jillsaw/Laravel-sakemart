@@ -2,7 +2,8 @@
     <nav class="navbar navbar-expand-md navbar-light shadow-sm sakemart-header-container h-auto">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{asset('img/logo.jpg')}}">
+              {{ config('app.name', '酩酊酒店') }}
+              <!--  <img src="{{asset('img/logo.jpg')}}">   -->
             </a>
             <form action="{{ route('products.index') }}" method="GET">
                 <div class="d-flex">

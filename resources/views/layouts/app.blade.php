@@ -15,11 +15,11 @@
        <link href="{{ asset('css/sakemart.css') }}" rel="stylesheet">
     </head>
     <body>
-        <div id="app">
+        <div id="app" class="sakemart-wrapper">
             <!--header call-->
           @component('components.header')
           @endcomponent
-            <main class="py-4 mb-5">
+            <main class="py-4">
                 @yield('content')
             </main>
 
