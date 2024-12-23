@@ -20,33 +20,50 @@
         <div class="col">
             <div class="mb-4">
                 <h2>おすすめ商品</h2>
-                <div class="row">
-                    @foreach ($recommend_products as $recommend_product)
-                        <div class="col-md-4">
-                            <a href="{{ route('products.show', $recommend_product) }}">
-                                @if ($recommend_product->image !== "")
-                                    <img src="{{ asset($recommend_product->image) }}" class="img-thumbnail sakemart-product-img-recommend">
-                                @else
-                                    <img src="{{ asset('img/dummy.png')}}" class="img-thumbnail sakemart-product-img-recommend">
-                                @endif
-                            </a>
-                            <div class="row">
-                                <div class="col-12">
-                                    <p class="samuraimart-product-label mt-2">
-                                        <a href="{{ route('products.show', $recommend_product) }}" class="link-dark">{{ $recommend_product->name }}</a>
-                                        <br>
-                                        <label>￥{{ number_format($recommend_product->price) }}</label>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
 
-            <div class="mb-4">
-                <h2>新着商品</h2>
-                <div class="row">
+                <!--カルーセル-->
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                   <div class="carousel-indicators"> 
+                       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                   </div>
+
+                   <div class="carousel-inner">
+                      @foreach ($recommend_products as $index => $recommend_product)
+                          <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+                              <a href="{{ route('products.show', $recommend_product) }}">
+                                  @if ($recommend_product->image !== "")
+                                     <img src="{{ asset($recommend_product->image) }}" class="img-thumbnail sakemart-product-img-recommend">
+                                  @else
+                                     <img src="{{ asset('img/dummy.png')}}" class="img-thumbnail sakemart-product-img-recommend">
+                                  @endif
+                              </a>
+                              <div class="carousel-caption d-none d-md-block">
+                                  <div class="col-12">
+                                      <h4 class="sakemart-product-label mt-2">
+                                          <a href="{{ route('products.show', $recommend_product) }}" class="link-dark">{{ $recommend_product->name }}</a>
+                                          <br>     
+                                          <label>￥{{ number_format($recommend_product->price) }}</label>
+                                      </h4>
+                                   </div>
+                               </div>
+                           </div>
+                       @endforeach
+                   </div>   
+                   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                   </button>
+                   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                       <span class="visually-hidden">Next</span>
+                   </button>
+               </div>
+
+              <div class="mb-4">
+                  <h2>新着商品</h2>
+                  <div class="row">
                     @foreach ($recently_products as $recently_product)
                         <div class="col-md-3">
                             <a href="{{ route('products.show', $recently_product) }}">
