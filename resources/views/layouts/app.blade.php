@@ -20,7 +20,9 @@
           @component('components.header')
           @endcomponent
             <main class="py-4">
-                @yield('content')
+                <div class="filter">
+                  @yield('content')
+                </div>
             </main>
 
            <!--footer call-->

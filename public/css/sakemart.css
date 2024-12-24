@@ -80,11 +80,33 @@ header > nav {
   padding: 12px 0 !important;
 }
 
+main {
+  position: relative;
+  background-image: url(../img/backgrand01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh; /* Ensure it covers the full viewport */
+  margin-bottom: 36px;
+  padding-bottom: 56px; /* フッターの高さと同じにする */
+}
+
+.filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
 footer {
   width: 100%;
   height: 56px;
-  position: absolute;
+  position: fixed; /* fixedに変更して常に下に固定する */
   bottom: 0;
+  left: 0; /* 左端を固定 */
+  background-color: #f8f4e6;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.1); /* 下に影を追加 */
 }
 
 a img {
@@ -98,7 +120,7 @@ a img:hover {
 .sakemart-wrapper {
   min-height: 100vh;
   position: relative;
-  padding-bottom: 56px;
+  padding-bottom: 20px;
   box-sizing: border-box;
 }
 
@@ -163,8 +185,8 @@ a img:hover {
 }
 
 .sakemart-header-container {
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 下に影を追加 */
+  background-color: #f8f4e6;
 }
 
 .sakemart-header-search-input {
@@ -225,11 +247,11 @@ a img:hover {
 }
 
 .review-score-color {
-  color: #0fbe9f;
+  color: #c1ab05;
 }
 
 .review-score-color:focus {
-  color: #0fbe9f;
+  color: #c1ab05;
 }
 
 .review-score-blank-color {
@@ -275,6 +297,22 @@ a img:hover {
   width: 90%;
   height: 160px;
   object-fit: cover;
+}
+
+.sakemart-product-label-carousel{
+  font-size:20px;
+	text-align:center;
+	line-height:0.95em;
+	font-weight:bold;
+	text-shadow: 0 0 1em rgba(255,255,255,1);
+}
+
+.sakemart-product-label-carousel > label{
+  font-size:15px;
+	text-align:center;
+	line-height:1em;
+	font-weight:bold;
+	text-shadow: 0 0 2em rgba(255,255,255,1);
 }
 
 @media screen and (max-width: 767px) {
@@ -386,4 +424,72 @@ a img:hover {
 
 .sakemart-mypage-link:hover {
   background-color: #f8f9fa;
+}
+
+/*評価表示*/
+.sakemart-star-rating{
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  color: #a9a9a9;
+  white-space: nowrap;
+}
+
+.sakemart-star-rating::before,
+.sakemart-star-rating::after{
+  content:'★★★★★';
+}
+
+.sakemart-star-rating::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+  color: #c1ab05;
+  white-space: nowrap;
+}
+
+.sakemart-star-rating[data-rate="0"]::after {
+  width: 0%;
+}
+
+.sakemart-star-rating[data-rate="0.5"]::after {
+  width: 10%;
+}
+
+.sakemart-star-rating[data-rate="1"]::after {
+  width: 20%;
+}
+
+.sakemart-star-rating[data-rate="1.5"]::after {
+  width: 30%;
+}
+
+.sakemart-star-rating[data-rate="2"]::after {
+  width: 40%;
+}
+
+.sakemart-star-rating[data-rate="2.5"]::after {
+  width: 50%;
+}
+
+.sakemart-star-rating[data-rate="3"]::after {
+  width: 60%;
+}
+
+.sakemart-star-rating[data-rate="3.5"]::after {
+  width: 70%;
+}
+
+.sakemart-star-rating[data-rate="4"]::after {
+  width: 80%;
+}
+
+.sakemart-star-rating[data-rate="4.5"]::after {
+  width: 90%;
+}
+
+.sakemart-star-rating[data-rate="5"]::after {
+  width: 100%;
 }

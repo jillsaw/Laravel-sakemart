@@ -93,6 +93,12 @@
                 <h2 class="float-left">カスタマーレビュー</h2>
             </div>
 
+            <div>
+             <!--平均評価の可視化-->
+             <span class="sakemart-star-rating" data-rate="{{ round($product->reviews->avg('score')*2)/2 }}">
+             {{ round($product->reviews->avg('score'),1) }}</span>
+            </div>
+
             <div class="row mb-3">
                 <div class="col-md-4 mb-4">
                     <div class="mb-4">

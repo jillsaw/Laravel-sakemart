@@ -41,7 +41,7 @@
                               </a>
                               <div class="carousel-caption d-none d-md-block">
                                   <div class="col-12">
-                                      <h4 class="sakemart-product-label mt-2">
+                                      <h4 class="sakemart-product-label-carousel mt-2">
                                           <a href="{{ route('products.show', $recommend_product) }}" class="link-dark">{{ $recommend_product->name }}</a>
                                           <br>     
                                           <label>￥{{ number_format($recommend_product->price) }}</label>
@@ -77,7 +77,11 @@
                                 <div class="col-12">
                                     <p class="sakemart-product-label mt-2">
                                         <a href="{{ route('products.show', $recently_product) }}" class="link-dark">{{ $recently_product->name }}</a>
-                                        <br>
+                                          <br>
+                                          <!-- 平均評価の可視化 -->
+                                          <span class="sakemart-star-rating" data-rate="{{ round($recently_product->reviews->avg('score') * 2) / 2 }}">
+                                          {{ round($recently_product->reviews->avg('score'), 1) }}</span><br>
+
                                         <label>￥{{ number_format($recently_product->price) }}</label>
                                     </p>
                                 </div>
