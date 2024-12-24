@@ -25,11 +25,14 @@ use App\Http\Controllers\PayPayController;
 //トップページ表示
 Route::get('/',  [WebController::class, 'index'])->name('top');
 
+Route::resource('products', ProductController::class);
+
 require __DIR__.'/auth.php';
 
 //レビュー評価投稿機能・お気に入り登録・解除
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('products', ProductController::class);
+   
     Route::post('reviews', [ReviewController::class, 'store'])->name('reviews.store');
  
     Route::post('favorites/{product_id}', [FavoriteController::class, 'store'])->name('favorites.store');
@@ -65,7 +68,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
  //paypay決済
  Route::prefix('paypay')->as('paypay.')->group(function () {
-    Route::view('/', 'paypay.payment')->name('index');
+    Route::view('/payment', 'paypay.payment')->name('index');
     Route::view('/complete', 'paypay.complete')->name('complete');
     Route::post('/payment', [PayPayController::class, 'payment'])->name('payment');
 });
