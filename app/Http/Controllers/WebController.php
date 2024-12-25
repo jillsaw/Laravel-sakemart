@@ -20,7 +20,7 @@ class WebController extends Controller
 
         $recommend_products = Product::where('recommend_flag', true)->take(3)->get();
 
-        $featured_products = Product::withAvg('reviews', 'score')->orderBy('reviews_avg_score', 'asc')->take(4)->get();
+        $featured_products = Product::withAvg('reviews', 'score')->orderBy('reviews_avg_score', 'desc')->take(4)->get();
 
         return view('web.index', compact('major_categories', 'categories', 'recently_products', 'recommend_products', 'featured_products'));
     }
